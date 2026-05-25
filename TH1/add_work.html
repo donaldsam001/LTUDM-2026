@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thêm công việc - To Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>To do list</h1>
+    </header>
+
+    <main>
+        <h2>Thêm công việc mới</h2>
+        
+        <div class="main-content">
+            <form action="list_work.html" method="GET">
+                <div class="form-group">
+                    <label for="title">Tiêu đề</label>
+                    <input type="text" id="title" class="form-control" placeholder="Tiêu đề">
+                </div>
+                
+                <div class="form-group">
+                    <label for="content">Nội dung</label>
+                    <textarea id="content" class="form-control" placeholder="Nội dung"></textarea>
+                </div>
+
+                <div class="btn-group">
+                    <a href="list_work.html" class="btn">Hủy</a>
+                    <button type="submit" class="btn">Lưu</button>
+                </div>
+            </form>
+        </div>
+        
+    </main>
+
+    <footer>
+        <p>Footer</p>
+    </footer>
+</body>
+</html>

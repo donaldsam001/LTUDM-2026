@@ -1,0 +1,363 @@
+/* style.css */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header, footer {
+    background-color: #fff;
+    text-align: center;
+    padding: 15px;
+    border-bottom: 1px solid #ccc;
+}
+
+footer {
+    border-bottom: none;
+    border-top: 1px solid #ccc;
+    margin-top: auto;
+}
+
+main {
+    flex: 1;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 100%;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Nút bấm */
+.btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    width: auto;
+    min-width: 100px;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.btn-add {
+    float: right;
+    margin-bottom: 15px;
+}
+
+.btn-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* Bảng Danh sách */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+}
+
+td a {
+    color: #333;
+    text-decoration: none;
+}
+
+td a:hover {
+    text-decoration: underline;
+}
+
+/* Form Thêm công việc */
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.form-group label {
+    width: 100px;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+.form-control {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+textarea.form-control {
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* Căn giữa text cho trang 404 */
+.text-center {
+    text-align: center;
+}
+
+.main-content{
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Tablet devices (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    main {
+        max-width: 100%;
+        margin: 10px;
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    /* Form responsive */
+    .form-group {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .form-group label {
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 5px;
+    }
+
+    .form-control {
+        width: 100%;
+    }
+
+    /* Button group stack on smaller screens */
+    .btn-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+        padding: 10px 12px;
+    }
+
+    .btn-add {
+        float: none;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    /* Table responsive - convert to scrollable */
+    table {
+        font-size: 14px;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+
+    header, footer {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+}
+
+/* Mobile devices (max-width: 480px) */
+@media screen and (max-width: 480px) {
+    body {
+        background-color: #f5f5f5;
+    }
+
+    header h1 {
+        font-size: 20px;
+    }
+
+    header, footer {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    main {
+        max-width: 100%;
+        margin: 5px;
+        padding: 10px;
+        border-radius: 4px;
+    }
+
+    h2 {
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
+
+    h3, h4 {
+        font-size: 16px;
+    }
+
+    /* Form fully responsive */
+    .form-group {
+        flex-direction: column;
+        margin-bottom: 12px;
+    }
+
+    .form-group label {
+        width: 100%;
+        margin-bottom: 4px;
+        font-size: 14px;
+    }
+
+    .form-control {
+        width: 100%;
+        padding: 8px;
+        font-size: 16px;
+    }
+
+    textarea.form-control {
+        min-height: 80px;
+    }
+
+    /* Buttons stack vertically */
+    .btn {
+        width: 100%;
+        padding: 10px 8px;
+        font-size: 14px;
+        border-radius: 4px;
+        margin-bottom: 8px;
+    }
+
+    .btn-add {
+        float: none;
+        width: 100%;
+        margin-bottom: 12px;
+    }
+
+    .btn-group {
+        flex-direction: column;
+        gap: 8px;
+        margin-top: 15px;
+    }
+
+    /* Table responsive - Vertical Card Layout */
+    table {
+        font-size: 13px;
+        width: 100%;
+        display: block;
+        border: none;
+    }
+
+    table thead {
+        display: none;
+    }
+
+    table tbody {
+        display: block;
+        width: 100%;
+    }
+
+    table tr {
+        display: block;
+        background: white;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        margin-bottom: 12px;
+        overflow: hidden;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    table td {
+        display: block;
+        border: none;
+        padding: 10px;
+        text-align: left;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    table td:last-child {
+        border-bottom: none;
+    }
+
+    /* Add labels before each cell */
+    table td:nth-child(1)::before {
+        content: "Thứ tự: ";
+        font-weight: bold;
+        color: #007bff;
+        margin-right: 5px;
+    }
+
+    table td:nth-child(2)::before {
+        content: "Tên công việc: ";
+        font-weight: bold;
+        color: #007bff;
+        margin-right: 5px;
+    }
+
+    table td:nth-child(3)::before {
+        content: "Trạng thái: ";
+        font-weight: bold;
+        color: #007bff;
+        margin-right: 5px;
+    }
+
+    table td:nth-child(4)::before {
+        content: "Hành động: ";
+        font-weight: bold;
+        color: #007bff;
+        display: block;
+        margin-bottom: 8px;
+    }
+
+    table td:nth-child(4) {
+        padding-top: 5px;
+    }
+
+    table td:nth-child(4) .btn {
+        width: 100%;
+        margin-bottom: 6px;
+        padding: 8px;
+        font-size: 13px;
+    }
+
+    p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+}
